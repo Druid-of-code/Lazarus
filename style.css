@@ -21,11 +21,11 @@ ul {
   background-color: #555555;
   color: white;
 }
-li.navbar{
+li{
   text-align: center;
   border-bottom: 1px solid #555555;
 }
-li.navbar:last-child {
+li:last-child {
   border-bottom: none;
 }
 .active {
