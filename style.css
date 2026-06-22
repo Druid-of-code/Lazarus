@@ -15,6 +15,7 @@ ul {
   color: black;
   padding: 8px 16px;
   text-decoration: none;
+  background-color: #f1f1f1;
 }
 li, .navbar:hover {
   background-color: #555555;
