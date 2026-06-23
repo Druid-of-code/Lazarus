@@ -14,10 +14,10 @@ ul {
   display: block;
   color: black;
   padding: 8px 16px;
+  background-color: #f1f1f1;
   text-decoration: none;
 }
 .navbar:hover {
-  background-color: #555555;
   color: white;
 }
 li.navbar{
