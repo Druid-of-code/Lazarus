@@ -18,11 +18,11 @@ ul {
   text-decoration: none;
 }
 .navbar:hover {
+  background-color: #555555;
   color: white;
 }
 li.navbar{
   text-align: center;
-  border-bottom: 1px solid #555555;
 }
 li.navbar:last-child {
   border-bottom: none;
