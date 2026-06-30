@@ -25,7 +25,8 @@ function setupHoverGroup(ids) {
 function setupNavToggle() {
   const nav = document.querySelector('ul');
   const toggle = document.getElementById('navToggle');
-  if (!nav || !toggle) return;
+  const pageBody = document.body;
+  if (!nav || !toggle || !pageBody) return;
 
   let collapsed = false;
 
@@ -34,10 +35,12 @@ function setupNavToggle() {
       toggle.classList.add('small');
       toggle.textContent = '';
       toggle.setAttribute('aria-label', 'Open navigation');
+      pageBody.classList.add('nav-collapsed');
     } else {
       toggle.classList.remove('small');
       toggle.textContent = 'Hide';
       toggle.setAttribute('aria-label', 'Hide navigation');
+      pageBody.classList.remove('nav-collapsed');
     }
   }
 
@@ -53,5 +56,7 @@ function setupNavToggle() {
 setupHoverGroup(['lihome', 'ahome']);
 setupHoverGroup(['liresources', 'aresources']);
 setupHoverGroup(['lieducation', 'aeducation']);
+setupHoverGroup(['liexercises', 'aexercises']);
+setupHoverGroup(['lireferences', 'areferences']);
 setupNavToggle();
 

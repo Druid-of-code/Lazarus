@@ -1,32 +1,65 @@
+:root {
+  --bg: #07111f;
+  --surface: rgba(10, 18, 31, 0.92);
+  --surface-strong: #101a2d;
+  --text: #f8fafc;
+  --muted: #a9b6c7;
+  --accent: #6ee7b7;
+  --accent-strong: #22c55e;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 45px rgba(2, 6, 23, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(110, 231, 183, 0.16), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #0f172a 48%, #111827 100%);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  width: 200px;
-  border: 1px solid #555555;
-  background-color: #f1f1f1;
+  padding: 1rem 0.75rem;
+  width: 215px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(16px);
   height: 100%;
   position: fixed;
   overflow: auto;
+  top: 0;
+  left: 0;
+  border-radius: 0 22px 22px 0;
+  box-shadow: var(--shadow);
 }
 
 .nav-toggle {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 16px;
+  left: 16px;
   z-index: 2;
-  padding: 8px 12px;
+  padding: 8px 14px;
   border: none;
-  border-radius: 4px;
-  background-color: black;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-strong), #14b8a6);
   color: white;
   cursor: pointer;
   font-size: 14px;
+  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.28);
 }
 
 .nav-toggle.small {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 0;
   border-radius: 50%;
   font-size: 0;
@@ -47,27 +80,125 @@ ul.collapsed {
   display: none;
 }
 
-.navbar{
-  display: block;
-  color: black;
-  padding: 8px 16px;
-  background-color: #f1f1f1;
-  text-decoration: none;
+.main-content {
+  margin-left: 245px;
+  padding: 28px 32px 40px;
+  max-width: 1120px;
+  transition: margin-left 0.25s ease;
 }
-.on{
-  background-color: #555555;
+
+body.nav-collapsed .main-content {
+  margin-left: 24px;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.main-content h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 0.8rem;
   color: white;
 }
-li.navbar{
-  text-align: center;
+
+.main-content h2 {
+  font-size: 1.35rem;
+  margin-top: 2.15rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(110, 231, 183, 0.25);
 }
+
+.main-content h3 {
+  margin-top: 1.25rem;
+  color: #d7fceb;
+}
+
+.main-content p,
+.main-content li {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  max-width: 760px;
+}
+
+.main-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.main-content a:hover {
+  color: #d1fae5;
+}
+
+.main-content a.hyper {
+  display: inline-block;
+  margin: 0.25rem 0 1rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  border-radius: 999px;
+  background: rgba(110, 231, 183, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.main-content a.hyper:hover {
+  background: rgba(110, 231, 183, 0.16);
+  transform: translateY(-1px);
+}
+
+.navbar {
+  display: block;
+  color: #e2e8f0;
+  padding: 0.85rem 1rem;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 999px;
+  margin: 0.35rem 0;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.navbar:hover,
+li.navbar:hover {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+li.navbar {
+  text-align: left;
+}
+
 li.navbar:last-child {
   border-bottom: none;
 }
+
 .active {
-  background-color: #04AA6D;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(20, 184, 166, 0.18));
   color: white;
+  box-shadow: inset 0 0 0 1px rgba(110, 231, 183, 0.3);
 }
-h1, h2, h3{
-  text-align: center;
+
+@media (max-width: 800px) {
+  ul {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 24px 18px 32px;
+  }
+
+  body.nav-collapsed .main-content {
+    margin-left: 0;
+  }
+
+  .nav-toggle {
+    top: 14px;
+    right: 14px;
+    left: auto;
+  }
 }
