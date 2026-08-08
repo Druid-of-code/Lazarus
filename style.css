@@ -108,7 +108,14 @@ body.nav-collapsed .main-content {
   font-size: 1.35rem;
   margin-top: 2.15rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(110, 231, 183, 0.25);
+  border-bottom: 0.8px solid rgba(110, 231, 183, 0.25);
+}
+
+hr {
+  border: 0;
+  height: 0.8px;
+  margin: 1.5rem 0;
+  background: linear-gradient(90deg, rgba(110, 231, 183, 0.08), rgba(110, 231, 183, 0.45), rgba(110, 231, 183, 0.08));
 }
 
 .main-content h3 {
