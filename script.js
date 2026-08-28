@@ -23,7 +23,7 @@ function setupHoverGroup(ids) {
 }
 
 function setupNavToggle() {
-  const nav = document.querySelector('ul');
+  const nav = document.querySelector('.navlist');
   const toggle = document.getElementById('navToggle');
   const pageBody = document.body;
   if (!nav || !toggle || !pageBody) return;

@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 }
 
-ul {
+.navlist {
   list-style-type: none;
   margin: 0;
   padding: 1rem 0.75rem;
@@ -76,7 +76,7 @@ ul {
   color: white;
 }
 
-ul.collapsed {
+.navlist.collapsed {
   display: none;
 }
 
@@ -196,7 +196,7 @@ li.navbar:last-child {
 }
 
 @media (max-width: 800px) {
-  ul {
+  .navlist {
     width: 100%;
     height: auto;
     position: relative;
