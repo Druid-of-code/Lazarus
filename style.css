@@ -120,13 +120,27 @@ hr {
 }
 
 .main-content h3,
-.main-content h6 {
+.main-content .emphasize,
+.main-content h6,
+.main-content .empsmall {
   margin-top: 1.25rem;
   color: #d7fceb;
 }
 
+.main-content h3,
+.main-content .emphasize {
+  font-size: 1.17em;
+}
+
 .main-content h6 {
   font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-content .empsmall {
+  font-size: 0.65rem;
   letter-spacing: 0.04em;
   font-weight: 600;
   text-transform: uppercase;
