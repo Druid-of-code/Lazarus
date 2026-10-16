@@ -9,9 +9,9 @@
   </head>
   <body>
     <script>
-      session.getItem("isMCPS") == "true" ? document.title = "Mentalhealth - MCPS" : document.title = "Mentalhealth - DMV"
+      sessionStorage.getItem("isMCPS") == "true" ? document.title = "Mentalhealth - MCPS" : document.title = "Mentalhealth - DMV"
       function a() {
-      session.getItem("isMCPS") == "true" ? window.location.href = "warningsigns.html" : window.location.href = "education.html"
+      sessionStorage.getItem("isMCPS") == "true" ? window.location.href = "warningsigns.html" : window.location.href = "education.html"
       }
     </script>
      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">Hide</button>
