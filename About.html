@@ -8,13 +8,19 @@
         async src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
+    <script>
+      session.getItem("isMCPS") == "true" ? document.title = "Mentalhealth - MCPS" : document.title = "Mentalhealth - DMV"
+      function a() {
+      session.getItem("isMCPS") == "true" ? window.location.href = "warningsigns.html" : window.location.href = "education.html"
+      }
+    </script>
      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">Hide</button>
     <ul class="navlist">
       <li id="lihome" class="navbar"><a id="ahome" class="navbar" href="index.html">Home</a></li>
       <li id="liDMV" class="navbar"><a id="aDMV" class="navbar" href="DMV.html">DMV Resources</a></li>
       <li id="liresources" class="navbar"><a id="aresources" class="navbar" href="resources.html">National Hotlines and Online Resources</a></li>
         <li id="liSpanish" class="navbar"><a id="aSpanish" class="navbar" href="Spanish.html">En Español</a></li>
-      <li id = "lieducation"class="navbar"><a id="aeducation" class="navbar" href="education.html">Education</a></li>
+      <li id = "lieducation"class="navbar"><a id="aeducation" class="navbar" onclick="a()">Education</a></li>
       <li id = "liexercises" class ="navbar"><a id="aexercises" class = "navbar" href="exercises.html">Exercises</a></li>
       <li id="liAbout" class="navbar active"><a id="aAbout" class="navbar active" href="About.html">About</a></li>
       <li id = "lireferences" class ="navbar"><a id= "areferences" class = "navbar" href="references.html">References</a></li>
