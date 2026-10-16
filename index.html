@@ -9,6 +9,8 @@
   </head>
   <body>
     <script>
+      const requestedMode = new URLSearchParams(window.location.search).get("isMCPS")
+      if (requestedMode !== null) sessionStorage.setItem("isMCPS", String(requestedMode === "true"))
       sessionStorage.getItem("isMCPS") == "true" ? document.title = "Mentalhealth - MCPS" : document.title = "Mentalhealth - DMV"
       function a() {
       sessionStorage.getItem("isMCPS") == "true" ? window.location.href = "warningsigns.html" : window.location.href = "education.html"
